@@ -14,10 +14,10 @@ async function main() {
         version: '1.0.0',
 
         // Network
-        host: process.env.HOST ?? 'localhost',
-        port: Number(process.env.PORT ?? 3000),
-        publicUrl: process.env.PUBLIC_URL,
-
+host: '0.0.0.0',
+port: Number(process.env.PORT ?? 10000),
+publicUrl: process.env.PUBLIC_URL,
+        
         // Cache (memory for dev, Redis for prod)
         cache: {
             type: (process.env.CACHE_TYPE as 'memory' | 'redis') ?? 'memory',
