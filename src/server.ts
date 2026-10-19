@@ -82,8 +82,8 @@ publicUrl: process.env.PUBLIC_URL,
     await server.start();
 
     const publicUrl =
-        process.env.PUBLIC_URL ??
-        `http://${process.env.HOST ?? 'localhost'}:${process.env.PORT ?? 3000}`;
+    process.env.PUBLIC_URL ??
+    `http://${process.env.HOST ?? '0.0.0.0'}:${process.env.PORT ?? 10000}`;
 
     const uiUrl = `https://ui.cinepro.cc/?omssurl=${encodeURIComponent(publicUrl)}`;
 
